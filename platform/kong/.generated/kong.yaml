@@ -34,14 +34,19 @@ consumers:
   username: jsmith
 plugins:
 - config:
-    account_email: '{vault://env/acme/account_email}'
-    domains:
-    - api.kong-air.com
-    renew_threshold_days: 30
-    storage: kong
-  enabled: true
-  id: 85c9d396-5330-11ee-8c99-0242ac120002
-  name: acme
+    dictionary_name: kong_rate_limiting_throttling
+    disable_penalty: true
+    limit:
+    - 5
+    strategy: local
+    throttling:
+      enabled: true
+      interval: 30
+      queue_limit: 5
+      retry_times: 3
+    window_size:
+    - 60
+  name: rate-limiting-advanced
   tags:
   - platform-repo-managed
 services:
@@ -311,18 +316,4 @@ services:
     - platform-repo-managed
   tags:
   - platform-repo-managed
-- name: acme-dummy-service
-  routes:
-  - hosts:
-    - api.kong-air.com
-    name: acme-dummy-route
-    paths:
-    - /.well-known/acme-challenge
-    protocols:
-    - http
-    tags:
-    - platform-repo-managed
-  tags:
-  - platform-repo-managed
-  url: http://127.0.0.1:65535
 upstreams: []
