@@ -39,5 +39,5 @@ jobs:
           deck gateway sync --select-tag platform-repo-managed \
               PRD/kong/kong.yaml \
               --konnect-addr="https://sg.api.konghq.com" \
-              --konnect-control-plane-name="muthoot-demo" \
+              --konnect-control-plane-name="kongair-konnect" \
               --konnect-token ${{ secrets.KONNECT_PAT }}
