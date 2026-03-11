@@ -4,9 +4,9 @@ go-apiops*/
 deck-*/
 kong-quickstart.*
 kong.env
-# kong.yaml
+kong.yaml
 *.pid
 tls*/
-# *.env
+*.env
 *.log
 temp/
