@@ -8,3 +8,6 @@ consumers:
 - username: jsmith
   groups:
   - name: silver
+- username: jsmith2
+  groups:
+  - name: silver
