@@ -32,6 +32,11 @@ consumers:
   tags:
   - platform-repo-managed
   username: jsmith
+- groups:
+  - name: silver
+  tags:
+  - platform-repo-managed
+  username: jsmith2
 plugins:
 - config:
     dictionary_name: kong_rate_limiting_throttling
