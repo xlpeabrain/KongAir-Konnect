@@ -3,7 +3,7 @@ plugins:
   - name: rate-limiting-advanced
     config:
       limit:
-      - 5
+      - 50
       window_size:
       - 60
       strategy: local
