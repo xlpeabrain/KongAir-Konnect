@@ -11,6 +11,6 @@ consumers:
 - username: jsmith2
   groups:
   - name: silver
-- username: jlee
+- username: kurosakisato
   groups:
   - name: lifetime
