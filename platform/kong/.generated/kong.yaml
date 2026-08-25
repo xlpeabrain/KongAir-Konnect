@@ -37,7 +37,8 @@ consumers:
   tags:
   - platform-repo-managed
   username: jsmith2
-- tags:
+- groups: null
+  tags:
   - platform-repo-managed
   username: jlee
 plugins:
