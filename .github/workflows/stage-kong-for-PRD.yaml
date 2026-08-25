@@ -12,6 +12,7 @@ on:
 jobs:
   JOB-ID:
     environment: dev
+    deployment: false
 #  this job is useful to debug workflows, see https://github.com/mheap/debug-artifact
 #  debug-artifacts:
 #    name: Upload Debug Artifacts
