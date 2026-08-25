@@ -9,9 +9,6 @@ on:
       - .github/workflows/deploy-kong-PRD.yaml
 
 jobs:
-  JOB-ID:
-    environment: dev
-    deployment: false
 #  this job is useful to debug workflows, see https://github.com/mheap/debug-artifact
 #  debug-artifacts:
 #    name: Upload Debug Artifacts
@@ -41,5 +38,5 @@ jobs:
           deck gateway sync --select-tag platform-repo-managed \
               PRD/kong/kong.yaml \
               --konnect-addr="https://sg.api.konghq.com" \
-              --konnect-control-plane-name=""${{ vars.KONNECT_CONTROL_PLANE }}"" \
+              --konnect-control-plane-name=""${{ vars.API_OPS_CONTROL_PLANE }}"" \
               --konnect-token ${{ secrets.KONNECT_PAT }}

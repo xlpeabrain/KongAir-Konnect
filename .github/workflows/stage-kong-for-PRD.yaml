@@ -10,9 +10,6 @@ on:
       - .github/workflows/stage-kong-for-PRD.yaml
 
 jobs:
-  JOB-ID:
-    environment: dev
-    deployment: false
 #  this job is useful to debug workflows, see https://github.com/mheap/debug-artifact
 #  debug-artifacts:
 #    name: Upload Debug Artifacts
@@ -48,7 +45,7 @@ jobs:
         run: |
           EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)
           echo "DIFF<<$EOF" >> $GITHUB_ENV
-          deck gateway diff --select-tag platform-repo-managed PRD/kong/kong.yaml --konnect-addr="https://sg.api.konghq.com" --konnect-control-plane-name="${{ vars.KONNECT_CONTROL_PLANE }}" --konnect-token ${{ secrets.KONNECT_PAT }} >> $GITHUB_ENV
+          deck gateway diff --select-tag platform-repo-managed PRD/kong/kong.yaml --konnect-addr="https://sg.api.konghq.com" --konnect-control-plane-name="${{ vars.API_OPS_CONTROL_PLANE }}" --konnect-token ${{ secrets.KONNECT_PAT }} >> $GITHUB_ENV
           echo "$EOF" >> $GITHUB_ENV
 
       - name: Create PR to stage changes for the Kong Gateway in production
