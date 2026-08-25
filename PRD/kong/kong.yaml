@@ -41,7 +41,7 @@ consumers:
   - name: lifetime
   tags:
   - platform-repo-managed
-  username: jlee
+  username: kurosakisato
 plugins:
 - config:
     dictionary_name: kong_rate_limiting_throttling
