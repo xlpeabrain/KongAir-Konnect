@@ -12,3 +12,4 @@ consumers:
   groups:
   - name: silver
 - username: jlee
+  groups:
