@@ -8,7 +8,6 @@ on:
     paths-ignore:
       - 'PRD/**'
       - 'platform/kong/.generated/kong.yaml'
-run: env
 
 jobs:
 
@@ -21,6 +20,14 @@ jobs:
 #        uses: mheap/debug-artifact@v1
 #        env:
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  check-env: 
+    name: Check Environment Variables
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check Environment Variables
+        run: env
 
   has-changes:
     name: Have specs, configurations, or pipeline files changed
