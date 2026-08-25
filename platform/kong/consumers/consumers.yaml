@@ -13,3 +13,4 @@ consumers:
   - name: silver
 - username: jlee
   groups:
+  - name: lifetime
