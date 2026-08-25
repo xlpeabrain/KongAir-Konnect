@@ -8,6 +8,7 @@ on:
     paths:
       - platform/kong/.generated/kong.yaml
       - .github/workflows/stage-kong-for-PRD.yaml
+env: dev
 
 jobs:
 
@@ -20,7 +21,6 @@ jobs:
 #        uses: mheap/debug-artifact@v1
 #        env:
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  environment: dev
 
   stage-kong-for-prd:
     name: Stage Kong changes for PRD
