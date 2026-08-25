@@ -37,7 +37,8 @@ consumers:
   tags:
   - platform-repo-managed
   username: jsmith2
-- groups: null
+- groups:
+  - name: lifetime
   tags:
   - platform-repo-managed
   username: jlee
