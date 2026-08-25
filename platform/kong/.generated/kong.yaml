@@ -37,6 +37,9 @@ consumers:
   tags:
   - platform-repo-managed
   username: jsmith2
+- tags:
+  - platform-repo-managed
+  username: jlee
 plugins:
 - config:
     dictionary_name: kong_rate_limiting_throttling
