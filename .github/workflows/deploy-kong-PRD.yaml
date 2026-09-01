@@ -29,6 +29,8 @@ jobs:
 
       - name: Setup deck
         uses: xlpeabrain/setup-deck@v1
+# Original deck setup action. Above setup-deck is customized for deploying on OS X 
+#       uses: kong/setup-deck@v1
         with:
           deck-version: '1.54.0'
           wrapper: false
