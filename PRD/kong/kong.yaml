@@ -37,11 +37,6 @@ consumers:
   tags:
   - platform-repo-managed
   username: jsmith2
-- groups:
-  - name: lifetime
-  tags:
-  - platform-repo-managed
-  username: kurosakisato
 plugins:
 - config:
     dictionary_name: kong_rate_limiting_throttling
